@@ -20,14 +20,17 @@ body {
   margin: 0;
 }
 
-p {
+p,
+span,
+li {
+  font-size: 10;
   margin-top: 0px;
   margin-bottom: 0px;
   border: blueviolet 1px solid;
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 28px;
   text-transform: uppercase;
   margin: 0;
   color: black;
@@ -35,17 +38,24 @@ h1 {
 }
 
 h2 {
+  font-size: 19.5px;
   text-transform: uppercase;
   color: var(--main-color);
   border-bottom: solid var(--main-color) 3px;
   margin: 0;
 }
 
+h3 {
+  font-size: 13.5px;
+}
+
 h4 {
+  font-size: 15;
   margin: 0;
 }
 
 h5 {
+  font-size: 9px;
   margin: 0;
 }
 
@@ -183,6 +193,18 @@ canvas {
 }
 
 /* Most likely delete above styles */
+
+a {
+  text-decoration: none;
+}
+
+.icon-left > i {
+  padding-right: 5px;
+}
+
+.icon-right > i {
+  padding-left: 5px;
+}
 
 .column-container {
   display: flex;
