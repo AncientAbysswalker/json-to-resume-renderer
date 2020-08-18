@@ -69,7 +69,9 @@ function setExperience(arr) {
     for (job of arr) {
       // Determine the accomplishments list
       const inner_list = `<ul>
-        <li>${job.accomplishments.join("</li><li>")}</li>
+        <li>
+          ${job.accomplishments.join("</li><li>")}
+        </li>
       </ul>`;
 
       // Set the field
@@ -100,7 +102,9 @@ function setProjects(arr) {
     for (job of arr) {
       // Determine the accomplishments list
       const inner_list = `<ul>
-        <li>${job.accomplishments.join("</li><li>")}</li>
+        <li>
+          ${job.accomplishments.join("</li><li>")}
+        </li>
       </ul>`;
 
       // Set the field
@@ -132,15 +136,17 @@ function setSkills(arr) {
     // Append each skill
     for (skill of arr) {
       // Determine the accomplishments list
-      const inner_list = `<div class="clumped">
-        <p class="badge">${skill.attributes.join('</p><p class="badge">')}</p>
-      </div>`;
+      const inner_list = `<p class="badge">
+        ${skill.attributes.join('</p><p class="badge">')}
+      </p>`;
 
       // Set the field
       $("#skills").append(
         `<div>
           <h2>${skill.title} <span class="${skill.icon}"></span></h2>
-          ${inner_list}
+          <div class="clumped">
+            ${inner_list}
+          </div>
         </div>`
       );
     }
@@ -150,35 +156,47 @@ function setSkills(arr) {
 }
 
 // // Set the education field of the resume
-// function setEducation(arr) {
-//   if (arr && arr.length > 0) {
-//     // Empty element
-//     $("#education").empty();
+function setEducation(arr) {
+  if (arr && arr.length > 0) {
+    // Empty element
+    $("#education").empty();
 
-//     // Append each job
-//     for (job of arr) {
-//       // Determine the accomplishments list
-//       const inner_list = `<ul>
-//           <li>${job.accomplishments.join("</li><li>")}</li>
-//         </ul>`;
+    // Append each job
+    for (education of arr) {
+      // Set the field
+      $("#education").append(
+        `<div>
+          <h4>${education.degree}</h4>
+          <h5>${education.school}</h5>
+          <div class="column-container">
+            <p>${education.date}</p>
+            <p>${education.location}</p>
+          </div>
+        </div>`
+      );
+    }
+  } else {
+    $("#education").parent().remove();
+  }
+}
 
-//       // Set the field
-//       $("#education").append(
-//         `<div>
-//             <h4>${job.role}</h4>
-//             <h5>${job.company}</h5>
-//             <div class="column-container">
-//               <p>${job.date}</p>
-//               <p>${job.location}</p>
-//             </div>
-//             ${inner_list}
-//           </div>`
-//       );
-//     }
-//   } else {
-//     $("#education").parent().remove();
-//   }
-// }
+// Set the passions field of the resume
+function setPassions(arr) {
+  if (arr && arr.length > 0) {
+    // Empty element
+    $("#passions").empty();
+
+    // Append each passion
+    for (passion of arr) {
+      // Set the field
+      $("#passions").append(
+        `<p class="icon-left badge"><i class="${passion.icon}"></i>${passion.title}</p>`
+      );
+    }
+  } else {
+    $("#passions").parent().remove();
+  }
+}
 
 // Read in the JSON file using jQuery
 $.getJSON("resume.json", (data) => {
@@ -198,6 +216,6 @@ $.getJSON("resume.json", (data) => {
 
   // Set fields in the right column
   setSkills(data.skills);
-  //   setEducation(data.education);
-  //   setPassions(data.passions);
+  setEducation(data.education);
+  setPassions(data.passions);
 });

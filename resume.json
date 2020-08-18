@@ -89,39 +89,39 @@
   "passions": [
     {
       "title": "Hiking & Camping",
-      "icon": "faMapSigns"
+      "icon": "fas fa-map-signs"
     },
     {
       "title": "Health",
-      "icon": "faHeartbeat"
+      "icon": "fas fa-heartbeat"
     },
     {
       "title": "Travel",
-      "icon": "faGlobe"
+      "icon": "fas fa-globe"
     },
     {
       "title": "Sports",
-      "icon": "faSoccerBallO"
+      "icon": "fas fa-futbol"
     },
     {
       "title": "Tinkering",
-      "icon": "faCogs"
+      "icon": "fas fa-cogs"
     },
     {
       "title": "Software",
-      "icon": "faCode"
+      "icon": "fas fa-code"
     },
     {
       "title": "Efficiency",
-      "icon": "faChain"
+      "icon": "fas fa-link"
     },
     {
       "title": "Blockchain and DLT",
-      "icon": "faCubes"
+      "icon": "fas fa-cubes"
     },
     {
       "title": "Finance",
-      "icon": "faBank"
+      "icon": "fas fa-university"
     }
   ],
   "skills": [
