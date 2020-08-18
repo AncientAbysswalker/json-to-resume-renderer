@@ -76,12 +76,12 @@ function setExperience(arr) {
 
       // Set the field
       $("#experience").append(
-        `<div>
+        `<div class="icon-left">
           <h4>${job.role}</h4>
           <h5>${job.company}</h5>
-          <div class="column-container">
-            <p>${job.date}</p>
-            <p>${job.location}</p>
+          <div class="bisect-container">
+            <p><i class="fas fa-calendar-alt"></i>${job.date}</p>
+            <p><i class="fas fa-map-marker-alt"></i>${job.location}</p>
           </div>
           ${inner_list}
         </div>`
@@ -109,14 +109,15 @@ function setProjects(arr) {
 
       // Set the field
       $("#projects").append(
-        `<div>
-          <div class="column-container">
+        `<div class="icon-left">
+          <div class="bisect-container">
             <h4>${job.title}</h4>
-            <p>${job.date}</p>
+            <p><i class="fas fa-calendar-alt"></i>${job.date}</p>
           </div>
-          <span class="fab fa-github"><a href="${job.github}">${
-          job.github.split("://")[1]
-        }</a></span>
+          <span>
+            <i class="fab fa-github"></i>
+            <a href="${job.github}">${job.github.split("://")[1]}</a>
+          </span>
           ${inner_list}
         </div>`
       );
@@ -168,9 +169,9 @@ function setEducation(arr) {
         `<div>
           <h4>${education.degree}</h4>
           <h5>${education.school}</h5>
-          <div class="column-container">
-            <p>${education.date}</p>
-            <p>${education.location}</p>
+          <div class="bisect-container icon-left">
+            <p><i class="fas fa-calendar-alt"></i>${education.date}</p>
+            <p><i class="fas fa-map-marker-alt"></i>${education.location}</p>
           </div>
         </div>`
       );

@@ -43,15 +43,18 @@ h2 {
   color: var(--main-color);
   border-bottom: solid var(--main-color) 3px;
   margin: 0;
+  border: blueviolet 1px solid;
 }
 
 h3 {
   font-size: 13.5px;
+  border: blueviolet 1px solid;
 }
 
 h4 {
   font-size: 15;
   margin: 0;
+  border: blueviolet 1px solid;
 }
 
 h5 {
@@ -198,17 +201,23 @@ a {
   text-decoration: none;
 }
 
-.icon-left > i {
+.icon-left i {
   padding-right: 5px;
 }
 
-.icon-right > i {
+.icon-right i {
   padding-left: 5px;
 }
 
-.column-container {
+.column-container,
+.bisect-container {
   display: flex;
   justify-content: space-evenly;
+}
+
+.bisect-container > * {
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .resume-container {
