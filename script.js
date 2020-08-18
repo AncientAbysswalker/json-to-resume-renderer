@@ -1,7 +1,3 @@
-//const fieldName = document.getElementById("name");
-// const closeBtn = document.getElementById("close-btn")! as HTMLButtonElement;
-// const rules = document.getElementById("rules")! as HTMLDivElement;
-
 // Set the name field of the resume
 function setName(val) {
   if (val) $("#name").html(val);
@@ -9,39 +5,180 @@ function setName(val) {
 
 // Set the subheader field of the resume
 function setSubHeader(arr) {
-  if (arr && arr.length > 0) $("#subheader").html(arr.join(" • "));
+  if (arr && arr.length > 0) {
+    $("#subheader").html(arr.join(" • "));
+  } else {
+    $("#subheader").remove();
+  }
 }
 
 // Set the phone field of the resume
 function setPhone(val) {
-  if (val) $("#phone").html(val);
+  if (val) {
+    $("#phone").html(val);
+  } else {
+    $("#phone").parent().remove();
+  }
 }
 
-// Set the phone field of the resume
+// Set the email field of the resume
 function setEmail(val) {
-  if (val) $("#email").html(val);
+  if (val) {
+    $("#email").html(val);
+  } else {
+    $("#email").parent().remove();
+  }
 }
 
-// Set the phone field of the resume
+// Set the location field of the resume
 function setLocation(val) {
-  if (val) $("#location").html(val);
+  if (val) {
+    $("#location").html(val);
+  } else {
+    $("#location").parent().remove();
+  }
 }
 
-// Set the phone field of the resume
+// Set the github field of the resume
 function setGithub(val) {
   if (val) {
     $("#github").html("Github");
     $("#github").attr("href", val);
+  } else {
+    $("#github").parent().remove();
   }
 }
 
-// Set the phone field of the resume
+// Set the portfolio field of the resume
 function setPortfolio(val) {
   if (val) {
     $("#portfolio").html("Portfolio");
     $("#portfolio").attr("href", val);
+  } else {
+    $("#portfolio").parent().remove();
   }
 }
+
+// Set the experience field of the resume
+function setExperience(arr) {
+  if (arr && arr.length > 0) {
+    // Empty element
+    $("#experience").empty();
+
+    // Append each job
+    for (job of arr) {
+      // Determine the accomplishments list
+      const inner_list = `<ul>
+        <li>${job.accomplishments.join("</li><li>")}</li>
+      </ul>`;
+
+      // Set the field
+      $("#experience").append(
+        `<div>
+          <h4>${job.role}</h4>
+          <h5>${job.company}</h5>
+          <div class="column-container">
+            <p>${job.date}</p>
+            <p>${job.location}</p>
+          </div>
+          ${inner_list}
+        </div>`
+      );
+    }
+  } else {
+    $("#experience").parent().remove();
+  }
+}
+
+// Set the projects field of the resume
+function setProjects(arr) {
+  if (arr && arr.length > 0) {
+    // Empty element
+    $("#projects").empty();
+
+    // Append each project
+    for (job of arr) {
+      // Determine the accomplishments list
+      const inner_list = `<ul>
+        <li>${job.accomplishments.join("</li><li>")}</li>
+      </ul>`;
+
+      // Set the field
+      $("#projects").append(
+        `<div>
+          <div class="column-container">
+            <h4>${job.title}</h4>
+            <p>${job.date}</p>
+          </div>
+          <span class="fab fa-github"><a href="${job.github}">${
+          job.github.split("://")[1]
+        }</a></span>
+          ${inner_list}
+        </div>`
+      );
+    }
+  } else {
+    $("#projects").parent().remove();
+  }
+}
+
+// Set the skills field of the resume
+function setSkills(arr) {
+  if (arr && arr.length > 0) {
+    // Empty element
+    $("#skills").empty();
+    console.log(arr);
+
+    // Append each skill
+    for (skill of arr) {
+      // Determine the accomplishments list
+      const inner_list = `<div class="clumped">
+        <p class="badge">${skill.attributes.join('</p><p class="badge">')}</p>
+      </div>`;
+
+      // Set the field
+      $("#skills").append(
+        `<div>
+          <h2>${skill.title} <span class="${skill.icon}"></span></h2>
+          ${inner_list}
+        </div>`
+      );
+    }
+  } else {
+    $("#skills").remove();
+  }
+}
+
+// // Set the education field of the resume
+// function setEducation(arr) {
+//   if (arr && arr.length > 0) {
+//     // Empty element
+//     $("#education").empty();
+
+//     // Append each job
+//     for (job of arr) {
+//       // Determine the accomplishments list
+//       const inner_list = `<ul>
+//           <li>${job.accomplishments.join("</li><li>")}</li>
+//         </ul>`;
+
+//       // Set the field
+//       $("#education").append(
+//         `<div>
+//             <h4>${job.role}</h4>
+//             <h5>${job.company}</h5>
+//             <div class="column-container">
+//               <p>${job.date}</p>
+//               <p>${job.location}</p>
+//             </div>
+//             ${inner_list}
+//           </div>`
+//       );
+//     }
+//   } else {
+//     $("#education").parent().remove();
+//   }
+// }
 
 // Read in the JSON file using jQuery
 $.getJSON("resume.json", (data) => {
@@ -56,6 +193,11 @@ $.getJSON("resume.json", (data) => {
   setPortfolio(data.portfolio);
 
   // Set fields in the left column
+  setExperience(data.experience);
+  setProjects(data.projects);
 
   // Set fields in the right column
+  setSkills(data.skills);
+  //   setEducation(data.education);
+  //   setPassions(data.passions);
 });

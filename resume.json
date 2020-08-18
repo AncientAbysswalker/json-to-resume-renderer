@@ -43,7 +43,7 @@
       "github": "https://github.com/AncientAbysswalker/IconPromise",
       "accomplishments": [
         "Updated and upgraded existing libraries to extend functionality and to permit the use of promises instead of event listeners",
-        "Understood and identified key areas of JavaScript and C\\# (.NET) codebase that required updates",
+        "Understood and identified key areas of JavaScript and C# (.NET) codebase that required updates",
         "Implemented changes to codebase while testing code stability and efficacy"
       ]
     },
@@ -127,7 +127,7 @@
   "skills": [
     {
       "title": "Electrical",
-      "icon": "faBolt",
+      "icon": "fas fa-bolt",
       "attributes": [
         "Analog & Digital Circuit Design",
         "PID Control",
@@ -139,7 +139,7 @@
     },
     {
       "title": "Mechanical",
-      "icon": "faGears",
+      "icon": "fas fa-cogs",
       "attributes": [
         "Prototyping",
         "CAD Design",
@@ -151,7 +151,7 @@
     },
     {
       "title": "Software",
-      "icon": "faLaptop",
+      "icon": "fas fa-laptop",
       "attributes": [
         "Git/VCS",
         "Python",
@@ -170,7 +170,7 @@
     },
     {
       "title": "Soft Skills",
-      "icon": "faGroup",
+      "icon": "fas fa-users",
       "attributes": [
         "Empathy",
         "Team Player",
