@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Resume from JSON</title>
+  </head>
+  <body>
+    <div class="resume-container">
+      <h1>Jordan Austin</h1>
+      <h3>Engineering Physics • Coder • Maker • Project Manager</h3>
+      <h5>
+        <span class="fas fa-phone">+1 (604) 614 2400</span>
+        <span class="fas fa-envelope">jmaustin.engphys@gmail.com</span>
+        <span class="fas fa-map-marker-alt">Vancouver, BC</span>
+        <span class="fab fa-github"
+          ><a href="github.com/AncientAbysswalker"
+            >github.com/AncientAbysswalker</a
+          ></span
+        >
+        <span class="fas fa-briefcase"
+          ><a href="ancientabysswalker.github.io">Portfolio</a></span
+        >
+      </h5>
+
+      <!-- Columned Sections -->
+      <div class="column-container">
+        <div class="col-left">
+          <h2>Experience</h2>
+          <div id="experience">
+            <h4>Project Coordinator</h4>
+            <h5>Enginuity Consulting</h5>
+            <div class="column-container">
+              <p>Oct. 2019 - Present</p>
+              <p>Burnaby, BC, Canada</p>
+            </div>
+            <ul>
+              <li>
+                Plan and coordinate project timeline, ensuring that schedule is
+                upheld and mitigating potential and existing risks
+              </li>
+              <li>
+                Effectively communicate project scope, schedule, and budget with
+                all levels of stakeholders and team members
+              </li>
+              <li>
+                Write applications and scripts to support sales and engineering
+                to increase the operational efficiency of the business
+              </li>
+            </ul>
+          </div>
+          <h2>Technical Projects</h2>
+          <div id="projects">
+            <div class="column-container">
+              <h4>Desktop Overlay</h4>
+              <p>Feb 2020 - Present</p>
+            </div>
+            <span class="fab fa-github"
+              ><a href="https://github.com/AncientAbysswalker/Elysian-Cannon"
+                >github.com/AncientAbysswalker/Elysian-Cannon</a
+              ></span
+            >
+            <ul>
+              <li>
+                Implemented a desktop overlay interface utilizing web
+                development methodologies and technologies including JavaScript,
+                ReactJS, ElectronJS, and NodeJS
+              </li>
+              <li>
+                Designed and implemented persistent memory structures to allow
+                interface to remain consistent between runtimes
+              </li>
+              <li>
+                Implemented back-end to be scalable and extensible, to allow
+                future scaling and development of applets moving forward
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-right">
+          <div id="skills">
+            <h2>Electrical <span class="fas fa-bolt"></span></h2>
+            <div class="clumped">
+              <p class="badge">Analog & Digital Circuit Design</p>
+              <p class="badge">PID Control</p>
+              <p class="badge">Arduino</p>
+              <p class="badge">Raspberry PI</p>
+              <p class="badge">Sensors and Actuators</p>
+              <p class="badge">PLC Control</p>
+            </div>
+            <h2>Mechanical <span class="fas fa-cogs"></span></h2>
+            <div class="clumped">
+              <p class="badge">Prototyping</p>
+              <p class="badge">CAD Design</p>
+              <p class="badge">P&ID</p>
+              <p class="badge">Laser Cutting</p>
+              <p class="badge">Water Jet</p>
+              <p class="badge">3D Printing</p>
+            </div>
+          </div>
+          <div id="education">
+            <h2>Education</h2>
+            <h4>BASc in Engineering Physics</h4>
+            <h5>University of British Columbia</h5>
+            <div class="column-container">
+              <p>May 2016</p>
+              <p>Vancouver, BC</p>
+            </div>
+          </div>
+          <div id="passions">
+            <h2>Passions</h2>
+            <div class="clumped">
+              <p class="badge">
+                <i class="fas fa-map-signs"></i>Hiking & Camping
+              </p>
+              <p class="badge">CAD Design</p>
+              <p class="badge">P&ID</p>
+              <p class="badge">Laser Cutting</p>
+              <p class="badge">Water Jet</p>
+              <p class="badge">3D Printing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <button id="rules-btn" class="btn rules-btn">Help</button>
+
+    <div id="rules" class="rules">
+      <button id="close-btn" class="btn">Close</button>
+
+      <h2>Background:</h2>
+      <p>
+        After travelling the world and seeing many things of great intrigue,
+        Waldo has decided to return home to visit his family and his puppy
+        Wilhelm III. <br /><br />
+        He is consulting his handy pocket map and trying to determine the
+        optimal path from his current position to his home. As he has a degree
+        is mathematics, he decides to do this considering one of the search
+        algorithms he is familiar with.
+      </p>
+      <h2>Instructions:</h2>
+      <p>
+        Draw out a map of the terrain to conduct pathfinding in. Different
+        tooltips will place different terrain onto the map; each tooltip has
+        mouseover text describing what it places. When you are satisfied with
+        your map place the start and end markers, select your search, and start.
+      </p>
+      <h2>Tooltips:</h2>
+      <h4>Start Marker</h4>
+      <p>
+        Places your start marker. This must be placed to run a search.
+      </p>
+      <h4>Finish Marker</h4>
+      <p>
+        Places your finish marker. This must be placed to run a search.
+      </p>
+      <h4>Water</h4>
+      <p>
+        Places a Water Tile. Water tiles cannot be passed through.
+      </p>
+      <h4>Road</h4>
+      <p>
+        Places a Road Tile. Movement on roads is five times (5x) easier than
+        default.
+      </p>
+      <h4>Forest</h4>
+      <p>
+        Places a Forest Tile. Movement in forests is five times (5x) harder than
+        default.
+      </p>
+      <h4>Eraser</h4>
+      <p>
+        Cleares any tiles from a position. Right-click is always bound to this
+        tooltip.
+      </p>
+    </div> -->
+
+    <!-- <script src="dist/pathfinding.js"></script> -->
+  </body>
+</html>

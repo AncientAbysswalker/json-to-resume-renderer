@@ -1,0 +1,185 @@
+{
+  "name": "Jordan Austin",
+  "name_subheader": [
+    "Engineering Physics",
+    "Coder",
+    "Maker",
+    "Project Manager"
+  ],
+  "phone": "+1 (604) 614 2400",
+  "email": "jmaustin.engphys@gmail.com",
+  "location": "Vancouver, BC",
+  "github": "github.com/AncientAbysswalker",
+  "portfolio": "ancientabysswalker.github.io",
+  "experience": [
+    {
+      "role": "Project Coordinator",
+      "company": "Enginuity Consulting",
+      "date": "Oct. 2019 - Present",
+      "location": "Burnaby, BC, Canada",
+      "accomplishments": [
+        "Plan and coordinate project timeline,  ensuring that schedule is upheld and mitigating potential and existing risks",
+        "Effectively communicate project scope, schedule, and budget with all levels of stakeholders and team members",
+        "Write applications and scripts to support sales and engineering to increase the operational efficiency of the business"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Desktop Overlay",
+      "status": "In Development",
+      "date": "Feb 2020 - Present",
+      "github": "https://github.com/AncientAbysswalker/Elysian-Cannon",
+      "accomplishments": [
+        "Implemented a desktop overlay interface utilizing web development methodologies and technologies including JavaScript, ReactJS, ElectronJS, and NodeJS",
+        "Designed and implemented persistent memory structures to allow interface to remain consistent between runtimes",
+        "Implemented back-end to be scalable and extensible, to allow future scaling and development of applets moving forward"
+      ]
+    },
+    {
+      "title": "File to Icon Extraction",
+      "status": "",
+      "date": "Jun 2020",
+      "github": "https://github.com/AncientAbysswalker/IconPromise",
+      "accomplishments": [
+        "Updated and upgraded existing libraries to extend functionality and to permit the use of promises instead of event listeners",
+        "Understood and identified key areas of JavaScript and C\\# (.NET) codebase that required updates",
+        "Implemented changes to codebase while testing code stability and efficacy"
+      ]
+    },
+    {
+      "title": "Simple Form Validation",
+      "status": "",
+      "date": "Jun 2020",
+      "github": "https://github.com/AncientAbysswalker/Simple-Form-Validation",
+      "accomplishments": [
+        "Implemented a simple form with field validation utilizing web development methodologies and TypeScript"
+      ]
+    },
+    {
+      "title": "PDF Merging Software",
+      "status": "",
+      "date": "Jan 2020",
+      "github": "https://github.com/AncientAbysswalker/Aria",
+      "accomplishments": [
+        "Created a PDF merging program in python and wx to allow me to merge PDF files simply without any paid software",
+        "Application was rapidly and successfully adapted by my employer to streamline workflows"
+      ]
+    },
+    {
+      "title": "Parts Database Software",
+      "status": "",
+      "date": "Jan 2019 -- Feb 2020",
+      "github": "https://git.io/LoCaS",
+      "accomplishments": [
+        "Created a front-end interface in python and wx to display relevant information and allow navigation throughout the related information",
+        "Designed and implemented databases to store parts data to be stored logically and efficiently, while allowing quick access",
+        "Created a list of rules and assumptions to govern the behaviour between data objects"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BASc in Engineering Physics",
+      "school": "University of British Columbia",
+      "date": "May 2016",
+      "location": "Vancouver, BC"
+    }
+  ],
+  "passions": [
+    {
+      "title": "Hiking & Camping",
+      "icon": "faMapSigns"
+    },
+    {
+      "title": "Health",
+      "icon": "faHeartbeat"
+    },
+    {
+      "title": "Travel",
+      "icon": "faGlobe"
+    },
+    {
+      "title": "Sports",
+      "icon": "faSoccerBallO"
+    },
+    {
+      "title": "Tinkering",
+      "icon": "faCogs"
+    },
+    {
+      "title": "Software",
+      "icon": "faCode"
+    },
+    {
+      "title": "Efficiency",
+      "icon": "faChain"
+    },
+    {
+      "title": "Blockchain and DLT",
+      "icon": "faCubes"
+    },
+    {
+      "title": "Finance",
+      "icon": "faBank"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Electrical",
+      "icon": "faBolt",
+      "attributes": [
+        "Analog & Digital Circuit Design",
+        "PID Control",
+        "Arduino",
+        "Raspberry PI",
+        "Sensors and Actuators",
+        "PLC Control"
+      ]
+    },
+    {
+      "title": "Mechanical",
+      "icon": "faGears",
+      "attributes": [
+        "Prototyping",
+        "CAD Design",
+        "P&ID",
+        "Laser Cutting",
+        "Water Jet",
+        "3D Printing"
+      ]
+    },
+    {
+      "title": "Software",
+      "icon": "faLaptop",
+      "attributes": [
+        "Git/VCS",
+        "Python",
+        "C#",
+        "C++",
+        "VBA",
+        "SQL",
+        "MatLab",
+        "LaTeX",
+        "Containers",
+        "HTML",
+        "CSS",
+        "Javascript",
+        "React JS"
+      ]
+    },
+    {
+      "title": "Soft Skills",
+      "icon": "faGroup",
+      "attributes": [
+        "Empathy",
+        "Team Player",
+        "Adaptable",
+        "Communication",
+        "Time Management",
+        "Project Management",
+        "Problem Solving"
+      ]
+    }
+  ]
+}
