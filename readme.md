@@ -16,7 +16,7 @@ This was a short project written as a response to a technical assignment I was p
 2. Use jQuery and write a function that gets the above json object as its input and generates
    HTML code that looks like your original resume.
 3. You can use Twitter Bootstrap or any other library to help with the design of the html page.
-4. BONUS 1: Make sure the resume still looks good when printed using the browser.
+4. Make sure the resume still looks good when printed using the browser.
 
 ## Assumptions
 
