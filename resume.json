@@ -69,7 +69,7 @@
     {
       "title": "Parts Database Software",
       "status": "",
-      "date": "Jan 2019 -- Feb 2020",
+      "date": "Jan 2019 - Feb 2020",
       "github": "https://git.io/LoCaS",
       "accomplishments": [
         "Created a front-end interface in python and wx to display relevant information and allow navigation throughout the related information",
