@@ -76,10 +76,10 @@ function setExperience(arr) {
 
       // Set the field
       $("#experience").append(
-        `<div class="icon-left">
+        `<div class="icon-left section">
           <h4>${job.role}</h4>
-          <h5>${job.company}</h5>
-          <div class="bisect-container">
+          <p class="blue-text">${job.company}</p>
+          <div class="bisect-container grey-text">
             <p><i class="fas fa-calendar-alt"></i>${job.date}</p>
             <p><i class="fas fa-map-marker-alt"></i>${job.location}</p>
           </div>
@@ -99,24 +99,26 @@ function setProjects(arr) {
     $("#projects").empty();
 
     // Append each project
-    for (job of arr) {
+    for (project of arr) {
       // Determine the accomplishments list
       const inner_list = `<ul>
         <li>
-          ${job.accomplishments.join("</li><li>")}
+          ${project.accomplishments.join("</li><li>")}
         </li>
       </ul>`;
 
       // Set the field
       $("#projects").append(
-        `<div class="icon-left">
+        `<div class="icon-left section">
           <div class="bisect-container">
-            <h4>${job.title}</h4>
-            <p><i class="fas fa-calendar-alt"></i>${job.date}</p>
+            <h4>${project.title}</h4>
+            <p class="grey-text"><i class="fas fa-calendar-alt"></i>
+              ${project.date}
+            </p>
           </div>
-          <span>
+          <span class="grey-text">
             <i class="fab fa-github"></i>
-            <a href="${job.github}">${job.github.split("://")[1]}</a>
+            <a href="${project.github}">${project.github.split("://")[1]}</a>
           </span>
           ${inner_list}
         </div>`
@@ -143,9 +145,9 @@ function setSkills(arr) {
 
       // Set the field
       $("#skills").append(
-        `<div>
-          <h2>${skill.title} <span class="${skill.icon}"></span></h2>
-          <div class="clumped">
+        `<div class="section">
+          <h2>${skill.title} <i class="${skill.icon}"></i></h2>
+          <div class="clumped grey-text">
             ${inner_list}
           </div>
         </div>`
@@ -166,10 +168,10 @@ function setEducation(arr) {
     for (education of arr) {
       // Set the field
       $("#education").append(
-        `<div>
+        `<div class="section">
           <h4>${education.degree}</h4>
-          <h5>${education.school}</h5>
-          <div class="bisect-container icon-left">
+          <p class="blue-text">${education.school}</p>
+          <div class="bisect-container grey-text icon-left">
             <p><i class="fas fa-calendar-alt"></i>${education.date}</p>
             <p><i class="fas fa-map-marker-alt"></i>${education.location}</p>
           </div>
@@ -191,7 +193,7 @@ function setPassions(arr) {
     for (passion of arr) {
       // Set the field
       $("#passions").append(
-        `<p class="icon-left badge"><i class="${passion.icon}"></i>${passion.title}</p>`
+        `<p class="icon-left badge grey-text"><i class="${passion.icon}"></i>${passion.title}</p>`
       );
     }
   } else {

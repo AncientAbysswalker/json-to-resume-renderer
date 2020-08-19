@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <title>Resume from JSON</title>
   </head>
   <body>
@@ -13,24 +17,24 @@
       <!-- Resume Header Section -->
       <h1 id="name">No Name</h1>
       <h3 id="subheader">No • List • Of • Things</h3>
-      <h5>
-        <span class="icon-left"
+      <h5 class="icon-left contact-items">
+        <span
           ><i class="fas fa-phone"></i>
           <span id="phone">No Phone</span>
         </span>
-        <span class="icon-left"
+        <span
           ><i class="fas fa-envelope"></i>
           <span id="email">No Email</span>
         </span>
-        <span class="icon-left"
+        <span
           ><i class="fas fa-map-marker-alt"></i>
           <span id="location">No Location</span>
         </span>
-        <span class="icon-left"
+        <span
           ><i class="fab fa-github"></i
           ><a id="github" href="">No Github</a></span
         >
-        <span class="icon-left"
+        <span
           ><i class="fas fa-briefcase"></i
           ><a id="portfolio" href="">No Portfolio</a></span
         >
@@ -40,12 +44,12 @@
       <div class="column-container">
         <!-- Left Column Section for Experience and Projects -->
         <div class="col-left">
-          <div>
+          <div class="no-top-margin">
             <h2>Experience</h2>
             <div id="experience">
               <div>
                 <h4>No Role</h4>
-                <h5>No Company</h5>
+                <p>No Company</p>
                 <div class="column-container">
                   <p>No Date</p>
                   <p>No Location</p>
@@ -84,7 +88,7 @@
         </div>
         <!-- Right Column Section for Skills, Education, and Passions -->
         <div class="col-right">
-          <div id="skills">
+          <div id="skills" class="no-top-margin">
             <div>
               <h2>No Skill <span></span></h2>
               <div class="clumped">
@@ -113,7 +117,7 @@
             <div id="education">
               <div>
                 <h4>No Degree</h4>
-                <h5>No School</h5>
+                <p>No School</p>
                 <div class="column-container">
                   <p>No Date</p>
                   <p>No Location</p>
