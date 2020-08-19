@@ -10,7 +10,7 @@ https://ancientabysswalker.github.io/json-to-resume-renderer/
 
 ## Guidelines
 
-This was a short project written for a quick code project. The outline provided is as follows:
+This was a short project written as a response to a technical assignment I was provided. The outline provided is as follows:
 
 1. Convert your resume into a jSON object.
 2. Use jQuery and write a function that gets the above json object as its input and generates
